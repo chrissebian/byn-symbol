@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BYN Symbol — proof</title>
+  <style>
+    @font-face {
+      font-family: "BYN Symbol Montserrat";
+      src: url("../fonts/webfonts/BYNSymbolMontserrat[wght].woff2") format("woff2-variations");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    body {
+      font-family: "BYN Symbol Montserrat", system-ui, sans-serif;
+      margin: 2rem;
+      line-height: 1.5;
+    }
+    .weights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 1rem;
+    }
+    .weights span {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Проверка BYN Symbol</h1>
+  <p>После экспорта WOFF2 в <code>fonts/webfonts/</code> здесь должен отображаться символ Br:</p>
+  <p style="font-size: 3rem;">Br</p>
+  <p>Ось веса (пример):</p>
+  <div class="weights">
+    <span style="font-weight: 100;">Br 100</span>
+    <span style="font-weight: 400;">Br 400</span>
+    <span style="font-weight: 900;">Br 900</span>
+  </div>
+</body>
+</html>

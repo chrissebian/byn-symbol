@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Glyphs backups
+*.glyphs~
+*.glyphx
+
+# Временные файлы экспорта
+*.otf.bak
