@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BYN Symbol — font proof</title>
+  <title>BYN Symbol — проверка отображения шрифта</title>
   <style>
     @font-face {
       font-family: "BYN Symbol";
@@ -55,18 +55,18 @@
   </style>
 </head>
 <body>
-  <h1>BYN Symbol — проверка шрифта</h1>
+  <h1>BYN Symbol — проверка отображения шрифта</h1>
 
   <div class="note">
-    <strong>Текущий маппинг:</strong> знак отображается через кириллическую заглавную Б (U+0411).
-    Это временный визуальный слот. Не применяйте шрифт к обычному кириллическому тексту.
-    U+20C5 в текущем экспорте пока не поддерживается.
+    <strong>Текущее сопоставление символов:</strong> знак отображается через кириллическую заглавную Б (U+0411).
+    Это временный способ. Не применяйте шрифт ко всему кириллическому тексту.
+    Код U+20C5 в текущем экспорте пока не поддерживается.
   </div>
 
-  <h2>Знак и числовой контекст</h2>
+  <h2>Знак рядом с цифрами</h2>
   <p class="sample">1 250 Б</p>
 
-  <h2>Проверка веса</h2>
+  <h2>Проверка толщины штриха</h2>
   <div class="weights">
     <span style="font-weight: 100;">Б <small>100</small></span>
     <span style="font-weight: 300;">Б <small>300</small></span>
@@ -75,8 +75,8 @@
     <span style="font-weight: 900;">Б <small>900</small></span>
   </div>
 
-  <h2>Проверка slant на цифрах</h2>
+  <h2>Проверка наклона цифр</h2>
   <p class="digits">0123456789 1 250,50</p>
-  <p><small>Наклон самого BYN-глифа в текущем исходнике ещё не завершён.</small></p>
+  <p><small>Наклон самого глифа BYN в текущем исходнике ещё не завершён.</small></p>
 </body>
 </html>
