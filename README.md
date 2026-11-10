@@ -1,65 +1,51 @@
-# BYN Symbol — Belarusian Ruble Sign Font
+# BYN Symbol — шрифт знака белорусского рубля
 
-An open-source companion font for the **Belarusian ruble currency sign (BYN)**. Use the mark alongside an existing typeface in websites, product prices, documents, presentations, design files and print.
+**BYN Symbol** — открытый шрифтовой проект для использования нового знака белорусского рубля (BYN) на сайтах, в приложениях, дизайн-макетах, документах и печати.
 
-This repository contains a Montserrat-based prototype, variable and static font exports, and the editable Glyphs source. It is intended for designers and developers who need a practical way to typeset the new Belarusian ruble sign before native font and operating-system support becomes widespread.
+Проект помогает вставить знак в текст и визуально согласовать его с основной гарнитурой. В репозитории доступны вариативный и статические шрифты, исходник для Glyphs и примеры подключения. Текущая версия основана на Montserrat; дальнейшая цель — адаптивный символ с управлением толщиной, контрастом и наклоном.
 
 > [!IMPORTANT]
-> **Current build limitation:** the exported sign is currently mapped to Cyrillic capital letter **Б (U+0411)** as a temporary visual workaround. It is **not yet mapped to the dedicated Belarusian Ruble Sign code point U+20C5**. Apply this font only to the single currency-sign character — never to ordinary Cyrillic text. The current build is not suitable for semantic text interchange or copy/paste workflows that require a dedicated currency character.
+> **Ограничение текущей версии.** Знак пока отображается через заглавную кириллическую букву **Б (U+0411)**. Это временный способ визуальной вставки, а не самостоятельный код валютного символа. Шрифт следует применять **только к отдельному знаку**, а не ко всему тексту. Поддержка специального кода **U+20C5** ещё не добавлена в опубликованные файлы.
 
-## Download
+## Скачать
 
-- **[Variable font — TTF](fonts/variable/BYNsymbol-VariableVF.ttf)**
-- **[Variable font — WOFF](fonts/variable/BYNsymbol-VariableVF.woff)**
-- **[Static OTF and WOFF files](fonts/static/)**
-- **[Editable Glyphs source](sources/BYN%20symbol.glyphs)**
-- **[Usage guide](docs/usage.md)**
-
-## What it solves
-
-The National Bank of the Republic of Belarus approved a new graphic symbol for the Belarusian ruble in January 2026. The Unicode Consortium has accepted **U+20C5 BELARUSIAN RUBLE SIGN** for inclusion in Unicode 19.0. As of November 2026, Unicode 19.0 is still in preparation, and native support across operating systems, applications and installed fonts is not yet universal.
-
-This project is an interim typographic tool: it lets you place the sign as a separate glyph without changing the main font used for the rest of a layout.
-
-- **For designers:** use the sign in Figma, Adobe apps and other desktop tools that support installed fonts.
-- **For developers:** embed the WOFF font in a website with CSS @font-face.
-- **For documents and print:** use the TTF or OTF files in applications that support custom fonts.
-- **For price displays:** the source includes figures and basic punctuation for testing numeric combinations.
-
-This is an independent community font project, not an official font release by the National Bank of Belarus or the Unicode Consortium.
-
-## Current contents and status
-
-| Asset | Current status |
+| Что нужно | Файл |
 |---|---|
-| Variable TTF | Available |
-| Variable WOFF | Available |
-| Static OTF / WOFF | Thin, Light, Regular, Bold and Black |
-| Editable source | Glyphs file in sources/ |
-| Figures | 0–9 |
-| Punctuation | Space, period and comma |
-| Weight axis (wght) | Defined in the variable source |
-| Slant axis (slnt) | Experimental; the BYN sign still needs a dedicated slanted design |
-| Contrast axis | Not included yet |
-| Unicode U+20C5 mapping | Planned; not included in the current exports |
-| WOFF2 / SVG / PNG | Planned |
+| **Вариативный шрифт для установки** | [TTF](fonts/variable/BYNsymbol-VariableVF.ttf) |
+| **Вариативный шрифт для сайта** | [WOFF](fonts/variable/BYNsymbol-VariableVF.woff) |
+| **Отдельные начертания** | [Статические OTF и WOFF](fonts/static/) |
+| **Редактируемый исходник** | [Файл Glyphs](sources/BYN%20symbol.glyphs) |
+| **Пошаговая инструкция** | [Как использовать](docs/usage.md) |
 
-The current font is a **companion symbol font**, not a full text family. It is designed to be applied to the currency sign itself.
+Статические файлы представлены начертаниями **Thin, Light, Regular, Bold и Black**. Это названия начертаний в шрифтовом ПО, а не отдельные семейства.
 
-## Quick start
+## Зачем нужен BYN Symbol
 
-### Desktop: Figma, Adobe apps, Office and print
+Новый знак белорусского рубля был утверждён Национальным банком Республики Беларусь в январе 2026 года. Однако его поддержка в операционных системах и распространённых шрифтах появляется постепенно. Пока нужного глифа нет в вашей гарнитуре, обычное обозначение «BYN» или «руб.» можно заменить визуальным символом через отдельный шрифт.
 
-1. Download the [variable TTF](fonts/variable/BYNsymbol-VariableVF.ttf) or a static OTF from the static fonts folder.
-2. Install the font in your operating system.
-3. In your text, select only the character **Б** (Cyrillic capital letter U+0411).
-4. Apply **BYN Symbol** to that character.
+**Кому пригодится:**
 
-Because U+0411 is the temporary character slot in this build, any ordinary letter Б formatted with this font will also turn into the currency sign. Keep the font applied only to the intended symbol.
+- **Дизайнерам** — для ценников, интерфейсов, айдентики, презентаций и печатных макетов.
+- **Разработчикам** — для отображения валюты на сайтах, в интернет-магазинах и приложениях.
+- **Бизнесу** — для единообразных цен, прайс-листов, коммерческих предложений и документов.
+- **Типографам** — для работы над собственными начертаниями и совместимостью с другими гарнитурами.
 
-### Web: CSS @font-face
+Это независимый открытый проект. Он **не является официальным шрифтом Национального банка** или Консорциума Unicode.
 
-Place the font files in your web project and register the WOFF file:
+## Как быстро вставить знак
+
+### В Figma, Adobe, офисных программах и печати
+
+1. Скачайте [вариативный TTF](fonts/variable/BYNsymbol-VariableVF.ttf) либо нужное [статическое начертание OTF](fonts/static/).
+2. Установите шрифт в macOS или Windows.
+3. В макете наберите заглавную **Б** и выделите **только эту букву**.
+4. Назначьте выделенному символу гарнитуру **BYN Symbol**.
+
+Так можно визуально показать знак рядом с текстом, набранным другим шрифтом. **Не применяйте BYN Symbol ко всему абзацу**: обычные буквы Б тоже будут заменяться валютным знаком.
+
+### На сайте
+
+Скопируйте файл WOFF в папку шрифтов вашего проекта и подключите его:
 
 ~~~css
 @font-face {
@@ -76,59 +62,68 @@ Place the font files in your web project and register the WOFF file:
 }
 ~~~
 
-Use the temporary glyph in a dedicated span:
+Пример вставки:
 
 ~~~html
-<p>1 250 <span class="byn-symbol" aria-label="Belarusian ruble">Б</span></p>
+<p>1 250 <span class="byn-symbol" aria-label="Белорусский рубль">Б</span></p>
 ~~~
 
-Adjust the weight with the normal CSS font-weight property. The slant axis is not yet validated for the BYN sign itself.
+Этот пример использует временный код U+0411. **Не записывайте букву Б как валютный символ в базах данных, API или финансовых документах**, где требуется однозначная кодировка. Для таких данных сохраняйте код валюты **BYN**.
 
-For complete desktop, web and print instructions, see the [usage guide](docs/usage.md).
+Подробности — в [руководстве по использованию](docs/usage.md).
 
-## Unicode status: U+20C5
+## Возможности текущей версии
 
-The official character name is **BELARUSIAN RUBLE SIGN** and its current proposed code point is **U+20C5**.
+| Возможность | Состояние |
+|---|---|
+| Вариативный TTF | Готов |
+| Вариативный WOFF | Готов |
+| Статические OTF и WOFF | Готовы: 5 начертаний |
+| Редактируемый исходник Glyphs | Доступен |
+| Цифры 0–9, пробел, точка, запятая | Есть |
+| Толщина штриха — ось wght | Есть в исходнике |
+| Наклон — ось slnt | Экспериментальная: глиф BYN ещё требует доработки |
+| Контраст штриха — ось CONT | Запланирован |
+| Самостоятельный символ U+20C5 | Запланирован |
+| Альтернативные глифы через salt / ss01 | Запланированы |
+| WOFF2, SVG и PNG | Запланированы |
 
-On 28 October 2026, the Unicode Technical Committee accepted U+20C5 for publication in Unicode 19.0. The Unicode Pipeline still cautions that accepted characters and code points can change before the repertoire is frozen for publication. The current font files in this repository do not yet include the U+20C5 mapping.
+**Важно:** BYN Symbol — вспомогательный шрифт для валютного знака, а не полноценная гарнитура для набора текста.
 
-- [Unicode Pipeline — current character status](https://www.unicode.org/alloc/Pipeline.html)
-- [Approved UTC minutes documenting the initial assignment](https://www.unicode.org/L2/L2026/26093.htm)
-- [National Bank of Belarus — BYN symbol](https://www.nbrb.by/engl/coinsbanknotes/byn-ico)
+## Код символа в Unicode: U+20C5
 
-**Recommended next step:** add U+20C5 as the primary mapping, retain U+0411 only as an optional visual alternate if useful, and test the result in browsers and desktop applications. Do not use U+0411 as the long-term text encoding for the currency sign.
+Для нового знака предусмотрено название **BELARUSIAN RUBLE SIGN** и код **U+20C5**. 28 октября 2026 года Технический комитет Unicode принял символ для включения в будущий выпуск **Unicode 19.0**. По состоянию на ноябрь 2026 года этот выпуск ещё готовится; до окончательной публикации параметры нового символа могут уточняться.
 
-## Roadmap
+**В файлах этого репозитория U+20C5 пока не реализован.** Когда поддержка будет добавлена, U+20C5 должен стать основным способом вставки знака. Обычная кириллическая **Б (U+0411)** должна оставаться буквой; её альтернативное начертание, при необходимости, можно включать отдельно через OpenType.
 
-- [ ] Add the dedicated U+20C5 glyph mapping.
-- [ ] Keep the ordinary Cyrillic letter Б separate from the currency sign.
-- [ ] Complete the variable axes for the sign: weight, contrast and slant.
-- [ ] Add an optional OpenType stylistic alternate (ss01 / salt) for controlled typographic use.
-- [ ] Export WOFF2 and refreshed static files.
-- [ ] Add SVG and PNG downloads for users who do not want to install a font.
-- [ ] Expand browser, Windows, macOS, Figma and print proofs.
-- [ ] Publish a visual specimen and a tagged release.
+Проверить первоисточники:
 
-## License and commercial use
+- [Текущий план включения символов Unicode](https://www.unicode.org/alloc/Pipeline.html)
+- [Документы технического комитета Unicode](https://www.unicode.org/L2/L2026/26093.htm)
+- [Национальный банк Республики Беларусь](https://www.nbrb.by/)
 
-The font software is distributed under the [SIL Open Font License 1.1](OFL-1.1.txt).
+## План развития
 
-OFL permits commercial use, embedding, modification and redistribution under its terms. **The font software itself cannot be sold as a standalone product.** It can be bundled with software or another product. Paid services around the font — such as implementation, custom optical fitting, CMS integration or support — are a different offering.
+- [ ] Добавить глиф и корректное сопоставление с U+20C5.
+- [ ] Отделить валютный знак от обычной кириллической Б.
+- [ ] Доработать вариативный шрифт: **толщина (wght)**, **контраст (CONT)** и **наклон (slnt)**.
+- [ ] Поддержать альтернативное начертание через OpenType (salt / ss01), не меняя обычный текст автоматически.
+- [ ] Подготовить WOFF2 и обновить статические экспорты.
+- [ ] Добавить скачивание SVG и PNG.
+- [ ] Сделать интерактивное превью и подбор параметров под другие гарнитуры.
+- [ ] Проверить отображение в браузерах, Windows, macOS, Figma и печатных документах.
+- [ ] Опубликовать версионированный релиз с примерами.
 
-The project identifies Montserrat as its base. Before distributing further modified builds, preserve the applicable upstream attribution and license notices for the exact Montserrat source used.
+## Лицензия и коммерческое использование
 
-## По-русски
+Шрифтовые файлы и исходники распространяются по лицензии [SIL Open Font License 1.1](OFL-1.1.txt).
 
-**BYN Symbol** — открытый шрифтовой проект для набора нового знака белорусского рубля в интерфейсах, документах, макетах и печати.
+По её условиям разрешены использование в коммерческих проектах, встраивание, модификация и распространение. **Сам шрифт нельзя продавать как самостоятельный товар**; при этом он может входить в состав программ и других продуктов. Платные услуги по внедрению, доработке и технической поддержке не запрещены этой лицензией.
 
-Сейчас в сборке знак временно назначен на кириллическую заглавную **Б (U+0411)**. Это позволяет визуально вставить знак через отдельный шрифт, но не является полноценной Unicode-кодировкой валютного символа. Применяйте BYN Symbol только к выделенному знаку, а не ко всему тексту: обычная буква «Б» в этом шрифте тоже будет отображаться как знак рубля.
+Текущая версия проекта основана на Montserrat. При развитии и распространении производных версий необходимо сохранять применимые уведомления об авторстве и лицензионные условия исходной гарнитуры.
 
-Для корректного обмена текстом целевая кодировка — **U+20C5 BELARUSIAN RUBLE SIGN**. Код принят для включения в Unicode 19.0, но текущие файлы репозитория ещё не содержат этого маппинга.
+## Участие в проекте
 
-В репозитории доступны variable TTF/WOFF, статические OTF/WOFF и исходник Glyphs. Подробности установки и использования — в [руководстве](docs/usage.md).
+Предложения, сообщения об ошибках и изменения через GitHub приветствуются. Если обнаружена проблема с отображением, укажите операционную систему, программу, размер текста и приложите изображение результата.
 
-**Поисковые запросы:** символ белорусского рубля, знак белорусского рубля, шрифт символа BYN, шрифт белорусского рубля, как вставить символ белорусского рубля, Belarusian ruble sign font, BYN currency symbol font, U+20C5 font.
-
-## Contributing
-
-Issues and pull requests are welcome. Please include a rendering proof and the application / operating system used when reporting a font issue.
+**Частые вопросы:** как вставить знак белорусского рубля; где скачать символ BYN; как добавить знак белорусского рубля в Figma; как подключить шрифт BYN на сайте; как заменить отображение BYN в ценах; как использовать новый знак белорусского рубля в печати.
