@@ -3,40 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BYN Symbol — proof</title>
+  <title>BYN Symbol — font proof</title>
   <style>
     @font-face {
-      font-family: "BYN Symbol Montserrat";
-      src: url("../fonts/webfonts/BYNSymbolMontserrat[wght].woff2") format("woff2-variations");
+      font-family: "BYN Symbol";
+      src: url("../fonts/variable/BYNsymbol-VariableVF.woff") format("woff");
       font-weight: 100 900;
       font-style: normal;
       font-display: swap;
     }
+
     body {
-      font-family: "BYN Symbol Montserrat", system-ui, sans-serif;
       margin: 2rem;
+      font-family: system-ui, sans-serif;
       line-height: 1.5;
+      color: #222;
     }
+
+    .sample {
+      font-family: "BYN Symbol", sans-serif;
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
     .weights {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem 2rem;
       margin-top: 1rem;
     }
+
     .weights span {
+      display: grid;
+      gap: .25rem;
+      font-family: "BYN Symbol", sans-serif;
+      font-size: 2.5rem;
+    }
+
+    .digits {
+      font-family: "BYN Symbol", sans-serif;
       font-size: 2rem;
+      font-variation-settings: "wght" 400, "slnt" -10;
+    }
+
+    .note {
+      max-width: 52rem;
+      padding: 1rem;
+      background: #f3f3f3;
+      border-radius: .5rem;
     }
   </style>
 </head>
 <body>
-  <h1>Проверка BYN Symbol</h1>
-  <p>После экспорта WOFF2 в <code>fonts/webfonts/</code> здесь должен отображаться символ Br:</p>
-  <p style="font-size: 3rem;">Br</p>
-  <p>Ось веса (пример):</p>
-  <div class="weights">
-    <span style="font-weight: 100;">Br 100</span>
-    <span style="font-weight: 400;">Br 400</span>
-    <span style="font-weight: 900;">Br 900</span>
+  <h1>BYN Symbol — проверка шрифта</h1>
+
+  <div class="note">
+    <strong>Текущий маппинг:</strong> знак отображается через кириллическую заглавную Б (U+0411).
+    Это временный визуальный слот. Не применяйте шрифт к обычному кириллическому тексту.
+    U+20C5 в текущем экспорте пока не поддерживается.
   </div>
+
+  <h2>Знак и числовой контекст</h2>
+  <p class="sample">1 250 Б</p>
+
+  <h2>Проверка веса</h2>
+  <div class="weights">
+    <span style="font-weight: 100;">Б <small>100</small></span>
+    <span style="font-weight: 300;">Б <small>300</small></span>
+    <span style="font-weight: 400;">Б <small>400</small></span>
+    <span style="font-weight: 700;">Б <small>700</small></span>
+    <span style="font-weight: 900;">Б <small>900</small></span>
+  </div>
+
+  <h2>Проверка slant на цифрах</h2>
+  <p class="digits">0123456789 1 250,50</p>
+  <p><small>Наклон самого BYN-глифа в текущем исходнике ещё не завершён.</small></p>
 </body>
 </html>
